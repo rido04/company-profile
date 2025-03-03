@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+<section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
     <div class="text-center">
         <h1 class="text-5xl font-bold">Selamat Datang di Perusahaan Kami</h1>
         <p class="mt-4 text-lg">Kami menyediakan layanan terbaik untuk kebutuhan bisnis Anda.</p>
@@ -12,7 +12,7 @@
 </section>
 
 <!-- Tentang Kami -->
-<section class="py-16 bg-white text-gray-800">
+<section id="about" class="py-16 bg-white text-gray-800">
     <div class="container mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold text-gray-900">Tentang Kami</h2>
         <p class="mt-4 text-lg text-gray-600">Kami adalah perusahaan yang berdedikasi dalam menyediakan layanan terbaik untuk klien kami. Dengan pengalaman bertahun-tahun, kami terus berkembang dan memberikan solusi terbaik.</p>
@@ -33,103 +33,68 @@
 </section>
 
 <!-- Layanan -->
-<section class="py-16 bg-gray-100 text-gray-800">
+<section id="services" class="py-16 bg-gray-100 text-gray-800">
     <div class="container mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold text-gray-900">Layanan Kami</h2>
-        <p class="mt-4 text-lg text-gray-600">Kami menawarkan berbagai layanan terbaik untuk memenuhi kebutuhan bisnis Anda.</p>
+        <p class="mt-4 text-lg text-gray-600">Kami menawarkan berbagai layanan untuk memenuhi kebutuhan bisnis Anda.</p>
 
         <div class="mt-8 grid md:grid-cols-3 gap-8">
-            <!-- Layanan 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="text-indigo-600 text-5xl mb-4">🚀</div>
-                <h3 class="text-xl font-semibold">Pengembangan Website</h3>
-                <p class="text-gray-600 mt-2">Membangun website profesional dan responsif untuk bisnis Anda.</p>
-            </div>
-
-            <!-- Layanan 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="text-indigo-600 text-5xl mb-4">📱</div>
-                <h3 class="text-xl font-semibold">Aplikasi Mobile</h3>
-                <p class="text-gray-600 mt-2">Mengembangkan aplikasi mobile berbasis Android dan iOS.</p>
-            </div>
-
-            <!-- Layanan 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="text-indigo-600 text-5xl mb-4">📈</div>
-                <h3 class="text-xl font-semibold">Digital Marketing</h3>
-                <p class="text-gray-600 mt-2">Strategi pemasaran digital untuk meningkatkan brand awareness.</p>
-            </div>
+            @foreach($services as $service)
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-4xl">{{ $service->icon }}</div>
+                    <h3 class="text-xl font-semibold mt-4">{{ $service->title }}</h3>
+                    <p class="text-gray-600 mt-2">{{ $service->description }}</p>
+                </div>
+            @endforeach
         </div>
     </div>
 </section>
 
+
 <!-- Portfolio -->
-<section class="py-16 bg-white text-gray-800">
+<section id="porfolio" class="py-16 bg-white text-gray-800">
     <div class="container mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold text-gray-900">Portfolio Kami</h2>
         <p class="mt-4 text-lg text-gray-600">Beberapa proyek yang telah kami kerjakan untuk klien kami.</p>
 
         <div class="mt-8 grid md:grid-cols-3 gap-8">
-            <!-- Project 1 -->
-            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                <img src="https://source.unsplash.com/400x250/?website,technology" alt="Project 1" class="rounded-lg">
-                <h3 class="text-xl font-semibold mt-4">Website Perusahaan</h3>
-                <p class="text-gray-600 mt-2">Membangun website corporate dengan desain modern.</p>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                <img src="https://source.unsplash.com/400x250/?app,development" alt="Project 2" class="rounded-lg">
-                <h3 class="text-xl font-semibold mt-4">Aplikasi Mobile</h3>
-                <p class="text-gray-600 mt-2">Aplikasi mobile berbasis Android dan iOS.</p>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                <img src="https://source.unsplash.com/400x250/?marketing,ads" alt="Project 3" class="rounded-lg">
-                <h3 class="text-xl font-semibold mt-4">Digital Marketing</h3>
-                <p class="text-gray-600 mt-2">Strategi pemasaran digital yang sukses.</p>
-            </div>
+            @foreach($portfolios as $portfolio)
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <img src="{{ asset('storage/' . $portfolio->image) }}" alt="{{ $portfolio->title }}" class="rounded-lg">
+                    <h3 class="text-xl font-semibold mt-4">{{ $portfolio->title }}</h3>
+                    <p class="text-gray-600 mt-2">{{ $portfolio->description }}</p>
+                </div>
+            @endforeach
         </div>
     </div>
 </section>
 
 <!-- Testimonial -->
-<section class="py-16 bg-gray-100 text-gray-800">
+<section id="testimonial" class="py-16 bg-gray-100 text-gray-800">
     <div class="container mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold text-gray-900">Apa Kata Klien Kami?</h2>
         <p class="mt-4 text-lg text-gray-600">Ulasan dari beberapa klien kami yang puas dengan layanan kami.</p>
 
         <div class="mt-8 grid md:grid-cols-2 gap-8">
-            <!-- Testimonial 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <p class="text-gray-600 italic">"Pelayanan luar biasa! Website perusahaan kami terlihat profesional dan responsif."</p>
-                <div class="mt-4 flex items-center justify-center">
-                    <img src="https://source.unsplash.com/60x60/?person,man" class="w-12 h-12 rounded-full">
-                    <div class="ml-4 text-left">
-                        <h4 class="text-lg font-semibold">Budi Santoso</h4>
-                        <p class="text-gray-500 text-sm">CEO PT. Maju Jaya</p>
+            @foreach($testimonials as $testimonial)
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-600 italic">"{{ $testimonial->message }}"</p>
+                    <div class="mt-4 flex items-center justify-center">
+                        <img src="{{ asset('storage/' . $testimonial->image) }}" class="w-12 h-12 rounded-full">
+                        <div class="ml-4 text-left">
+                            <h4 class="text-lg font-semibold">{{ $testimonial->name }}</h4>
+                            <p class="text-gray-500 text-sm">{{ $testimonial->position }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <p class="text-gray-600 italic">"Aplikasi mobile yang mereka buat sangat user-friendly dan membantu bisnis saya berkembang."</p>
-                <div class="mt-4 flex items-center justify-center">
-                    <img src="https://source.unsplash.com/60x60/?person,woman" class="w-12 h-12 rounded-full">
-                    <div class="ml-4 text-left">
-                        <h4 class="text-lg font-semibold">Siti Rahmawati</h4>
-                        <p class="text-gray-500 text-sm">Founder Startup XYZ</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
 
+
 <!-- Kontak -->
-<section class="py-16 bg-white text-gray-800">
+<section id="contact" class="py-16 bg-white text-gray-800">
     <div class="container mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold text-gray-900">Hubungi Kami</h2>
         <p class="mt-4 text-lg text-gray-600">Jika Anda memiliki pertanyaan atau ingin bekerja sama, jangan ragu untuk menghubungi kami.</p>

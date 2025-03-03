@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('home');
@@ -21,3 +22,5 @@ Route::post('/contact', function (Request $request) {
 
     return back()->with('success', 'Pesan berhasil dikirim!');
 })->name('contact.send');
+
+Route::get('/', [HomeController::class, 'index']);
