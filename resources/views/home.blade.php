@@ -3,9 +3,9 @@
 @section('content')
 <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
     <div class="text-center">
-        <h1 class="text-5xl font-bold">Selamat Datang di Perusahaan Kami</h1>
-        <p class="mt-4 text-lg">Kami menyediakan layanan terbaik untuk kebutuhan bisnis Anda.</p>
-        <a href="#" class="mt-6 inline-block px-6 py-3 bg-white text-indigo-600 font-semibold rounded-full shadow-md hover:bg-gray-200">
+        <h1 class="text-5xl font-sans font-semibold">Selamat Datang di Perusahaan Kami</h1>
+        <p class="mt-4 font-sans text-lg">Kami menyediakan layanan terbaik untuk kebutuhan bisnis Anda.</p>
+        <a href="#" class="font-semibold mt-6 inline-block px-6 py-3 bg-white text-indigo-600 font-sans rounded-full shadow-md hover:bg-gray-200">
             Hubungi Kami
         </a>
     </div>
@@ -14,7 +14,7 @@
 <!-- Tentang Kami -->
 <section id="about" class="py-16 bg-white text-gray-800">
     <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold text-gray-900">Tentang Kami</h2>
+        <h2 class="text-5xl font-sans text-gray-900">Tentang Kami</h2>
         <p class="mt-4 text-lg text-gray-600">Kami adalah perusahaan yang berdedikasi dalam menyediakan layanan terbaik untuk klien kami. Dengan pengalaman bertahun-tahun, kami terus berkembang dan memberikan solusi terbaik.</p>
 
         <div class="mt-8 flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-10">
@@ -35,7 +35,7 @@
 <!-- Layanan -->
 <section id="services" class="py-16 bg-gray-100 text-gray-800">
     <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold text-gray-900">Layanan Kami</h2>
+        <h2 class="text-5xl font-sans text-gray-900">Layanan Kami</h2>
         <p class="mt-4 text-lg text-gray-600">Kami menawarkan berbagai layanan untuk memenuhi kebutuhan bisnis Anda.</p>
 
         <div class="mt-8 grid md:grid-cols-3 gap-8">
@@ -54,7 +54,7 @@
 <!-- Portfolio -->
 <section id="porfolio" class="py-16 bg-white text-gray-800">
     <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold text-gray-900">Portfolio Kami</h2>
+        <h2 class="text-5xl font-sans text-gray-900">Portfolio Kami</h2>
         <p class="mt-4 text-lg text-gray-600">Beberapa proyek yang telah kami kerjakan untuk klien kami.</p>
 
         <div class="mt-8 grid md:grid-cols-3 gap-8">
@@ -72,7 +72,7 @@
 <!-- Testimonial -->
 <section id="testimonial" class="py-16 bg-gray-100 text-gray-800">
     <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold text-gray-900">Apa Kata Klien Kami?</h2>
+        <h2 class="text-5xl font-sans text-gray-900">Apa Kata Klien Kami?</h2>
         <p class="mt-4 text-lg text-gray-600">Ulasan dari beberapa klien kami yang puas dengan layanan kami.</p>
 
         <div class="mt-8 grid md:grid-cols-2 gap-8">
@@ -96,7 +96,7 @@
 <!-- Kontak -->
 <section id="contact" class="py-16 bg-white text-gray-800">
     <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold text-gray-900">Hubungi Kami</h2>
+        <h2 class="text-5xl font-sans text-gray-900">Hubungi Kami</h2>
         <p class="mt-4 text-lg text-gray-600">Jika Anda memiliki pertanyaan atau ingin bekerja sama, jangan ragu untuk menghubungi kami.</p>
         <div class="mt-8 max-w-lg mx-auto bg-gray-100 p-6 rounded-lg shadow-md">
             <form action="{{ route('contact.send') }}" method="POST">
