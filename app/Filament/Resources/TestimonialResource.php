@@ -16,34 +16,26 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class TestimonialResource extends Resource
 {
     protected static ?string $model = Testimonial::class;
+    protected static ?string $navigationIcon = 'heroicon-o-shield-check';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    public static function form(Form $form): Form
+    public static function form(Forms\Form $form): Forms\Form
     {
-        return $form
-            ->schema([
-                //
-            ]);
+        return $form->schema([
+            Forms\Components\TextInput::make('name')->required(),
+            Forms\Components\TextInput::make('position')->required(),
+            Forms\Components\Textarea::make('message')->required(),
+            Forms\Components\FileUpload::make('image')->image(),
+        ]);
     }
 
-    public static function table(Table $table): Table
+    public static function table(Tables\Table $table): Tables\Table
     {
-        return $table
-            ->columns([
-                //
-            ])
-            ->filters([
-                //
-            ])
-            ->actions([
-                Tables\Actions\EditAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
-            ]);
+        return $table->columns([
+            Tables\Columns\TextColumn::make('name'),
+            Tables\Columns\TextColumn::make('position'),
+            Tables\Columns\TextColumn::make('message')->limit(50),
+            Tables\Columns\ImageColumn::make('image'),
+        ])->filters([])->actions([]);
     }
 
     public static function getRelations(): array
