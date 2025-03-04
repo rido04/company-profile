@@ -7,8 +7,9 @@
 
     <!-- Content -->
     <div class="relative z-10 text-center">
-        <h1 class="text-5xl font-sans font-semibold">Welcome To Our Company</h1>
-        <p class="mt-4 font-sans text-lg">We Serve Best Services For Your Business Need.</p>
+        <h1 class="text-5xl font-sans font-semibold">
+            <span id="typed-text"></span> <!-- Text akan diketik otomatis -->
+        </h1>
         <a href="#" class="font-semibold mt-6 inline-block px-6 py-3 bg-yellow-500 text-gray-900 font-sans rounded-full shadow-md hover:bg-gray-500 transition duration-500 ease-in-out">
             Contact Us
         </a>
@@ -18,14 +19,14 @@
 
     <!-- Tentang Kami -->
     <section id="about" class="py-16 bg-gray-00 text-gray-800">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-5xl font-sans text-gray-900">About Us</h2>
-            <p class="mt-4 text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ut nihil ipsam beatae animi quae corporis qui repellat illum libero dolorum nulla deserunt natus dolor eaque sit omnis ad, vitae modi eveniet deleniti! Dolorum accusantium mollitia fuga delectus ratione minus, itaque voluptatem consectetur molestias ut autem quaerat odio vitae quos amet ipsum blanditiis architecto soluta aliquid error praesentium. Rem fuga magnam recusandae architecto? Aliquam reiciendis qui illo labore. Laboriosam dolorum fugiat expedita nam voluptatem aliquid consequuntur voluptas culpa reprehenderit natus nesciunt aspernatur, error dicta eveniet praesentium quidem aperiam soluta. Voluptates ad ab nisi a odit eaque deserunt cupiditate, magnam recusandae similique, id laboriosam. Tempora, deleniti facere. Nam soluta ratione cupiditate, facilis similique, voluptatem itaque earum culpa recusandae sequi est reprehenderit modi, nihil ea accusantium quia non veritatis iste laborum assumenda alias voluptas inventore voluptatibus! Esse, natus aut aliquid eveniet explicabo dolorum harum expedita a. Asperiores ullam deserunt adipisci officiis alias?
+        <div class="container bg-gradient-to-r from-gray-700 to-stone-800  mx-auto px-6 text-center">
+            <h2 class="text-5xl font-sans text-gray-100">About Us</h2>
+            <p class="mt-4 text-lg text-gray-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim necessitatibus suscipit optio tempore nemo soluta rem ducimus cumque sint totam, accusamus quidem a alias omnis qui iure! Dolorem aspernatur tempora beatae perspiciatis et, accusamus unde reprehenderit molestias quo maxime. Quia id consequatur magnam tenetur beatae a eius veniam placeat nulla.
             </p>
                 <div class="justify-center">
-                    <h3 class="text-xl font-semibold mt-4">
+                    <h3 class="text-xl font-semibold text-gray-100 mt-5">
                         Vision and mission</h3>
-                    <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, consectetur. Sint earum quidem rem at architecto, impedit ullam fugit explicabo vitae autem molestiae qui soluta sapiente aliquid nihil laboriosam nostrum. Similique ad quisquam beatae quae aliquid quaerat labore. Repudiandae facere dolores ipsa dolorum, dolor nihil asperiores at. Neque, soluta necessitatibus.</p>
+                    <p class="text-gray-100 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, consectetur. Sint earum quidem rem at architecto, impedit ullam fugit explicabo vitae autem molestiae qui soluta sapiente aliquid nihil laboriosam nostrum. Similique ad quisquam beatae quae aliquid quaerat labore. Repudiandae facere dolores ipsa dolorum, dolor nihil asperiores at. Neque, soluta necessitatibus.</p>
                 </div>
             </div>
         </div>
@@ -89,7 +90,7 @@
     </section>
 
     <!-- Testimonial -->
-    <section id="testimonial" class="py-16 bg-gray-100 text-gray-800">
+    <section id="testimonial" class="py-16 bg-gray-200 text-gray-800">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-900">What They Say?</h2>
             <p class="mt-4 text-lg text-center text-gray-600">Reviews from our satisfied clients.</p>
