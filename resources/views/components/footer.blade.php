@@ -3,13 +3,13 @@
         <!-- Social Media Icons -->
         <div class="flex space-x-4">
             <a href="#" class=" text-gray-800 p-3 hover:text-yellow-600 transition duration-500 ease-in-out">
-                <i class="fab fa-twitter"></i>
+                <i class="fab fa-whatsapp"></i>
             </a>
             <a href="#" class=" text-gray-800 p-3 hover:text-yellow-600 transition duration-500 ease-in-out">
-                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
             </a>
             <a href="#" class=" text-gray-800 p-3 hover:text-yellow-600 transition duration-500 ease-in-out">
-                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-linkedin"></i>
             </a>
         </div>
 

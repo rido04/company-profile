@@ -37,7 +37,7 @@
     @endphp
 
     <!-- Layanan -->
-    <section id="services" class="py-16 bg-gray-100 text-gray-800">
+    <section id="services" class="py-16 bg-gray-100 text-gray-900">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-5xl font-sans text-gray-900 text-center mb-14">Our Services</h2>
             <div class="container grid md:grid-cols-3 gap-8 mx-auto">
@@ -66,7 +66,7 @@
 
 
     <!-- Portfolio -->
-    <section id="porfolio" class="py-16 bg-gradient-to-r from-gray-700 to-stone-800 text-white">
+    <section id="porfolio" class="py-16 bg-gradient-to-r bg-gray-900 text-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-5xl font-sans text-gray-100">Portfolio</h2>
             <p class="mt-4 text-lg text-gray-100">Here`s Our Best Project For Our Clients.</p>
