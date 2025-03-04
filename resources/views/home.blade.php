@@ -1,15 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-    <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-gray-700 to-stone-800 text-white">
-        <div class="text-center">
-            <h1 class="text-5xl font-sans font-semibold">Welcome To Our Company</h1>
-            <p class="mt-4 font-sans text-lg">We Serve Best Services For Your Business Need.</p>
-            <a href="#" class="font-semibold mt-6 inline-block px-6 py-3 bg-yellow-500 text-gray-900 font-sans rounded-full shadow-md hover:bg-gray-500 transition duration-500 ease-in-out">
-                Hubungi Kami
-            </a>
-        </div>
-    </section>
+<section id="home" class="overflow-hidden relative h-screen flex items-center justify-center bg-gradient-to-r from-gray-700 to-stone-800 text-white">
+    <!-- Container Particles -->
+    <div id="particles-js" class="absolute inset-0"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center">
+        <h1 class="text-5xl font-sans font-semibold">Welcome To Our Company</h1>
+        <p class="mt-4 font-sans text-lg">We Serve Best Services For Your Business Need.</p>
+        <a href="#" class="font-semibold mt-6 inline-block px-6 py-3 bg-yellow-500 text-gray-900 font-sans rounded-full shadow-md hover:bg-gray-500 transition duration-500 ease-in-out">
+            Contact Us
+        </a>
+    </div>
+</section>
+
 
     <!-- Tentang Kami -->
     <section id="about" class="py-16 bg-gray-00 text-gray-800">
@@ -73,7 +78,7 @@
 
             <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
                 @foreach($portfolios as $portfolio)
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="bg-gray-100  p-6 rounded-lg shadow-md">
                         <img src="{{ asset('storage/' . $portfolio->image) }}" alt="{{ $portfolio->title }}" class="rounded-lg">
                         <h3 class="text-xl text-gray-700 font-semibold mt-4">{{ $portfolio->title }}</h3>
                         <p class="text-gray-700 mt-2">{{ $portfolio->description }}</p>
