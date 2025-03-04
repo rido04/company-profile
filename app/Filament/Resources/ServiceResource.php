@@ -20,7 +20,16 @@ class ServiceResource extends Resource
         return $form->schema([
             Forms\Components\TextInput::make('title')->required(),
             Forms\Components\Textarea::make('description')->required(),
-            Forms\Components\TextInput::make('icon')->label('Icon (emoji atau FontAwesome)')->required(),
+            Forms\Components\Select::make('icon')
+            ->options([
+                'academic-cap' => 'Academic Cap',
+                'light-bulb' => 'Light Bulb',
+                'server' => 'Server',
+                'computer-desktop' => 'Computer',
+                'briefcase' => 'Briefcase',
+            ])
+            ->searchable()
+            ->required(),
         ]);
     }
 
