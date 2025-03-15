@@ -1,0 +1,28 @@
+version: "2"
+services:
+    app:
+        build: .
+        container_name: company_profile_app
+        links:
+            - database
+        depends_on:
+            - database
+        volumes:
+            - .:/var/www/html
+        ports:
+            - "8001:80"
+
+    database:
+        image: mysql:5.7
+        environment:
+            MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+            MYSQL_DATABASE: "cp"
+            MYSQL_USER: "ridho"
+            MYSQL_PASSWORD: "password"
+        ports:
+            - "8306:3306"
+        volumes:
+            - database:/var/lib/mysql
+
+volumes:
+    database:

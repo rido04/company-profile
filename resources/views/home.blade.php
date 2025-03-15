@@ -43,13 +43,13 @@
     @endphp
 
     <!-- Layanan -->
-    <section id="services" class="py-16 bg-gray-100 text-gray-900">
+    <section id="services" class="py-16 bg-gray-100 text-gray-900" data-aos="fade-up">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-5xl font-sans text-gray-900 text-center mb-14">Our Services</h2>
+            <h2 class="text-5xl font-sans text-gray-900 text-center mb-14 animate__animated animate__fadeInUp">Our Services</h2>
             <div class="container grid md:grid-cols-3 gap-8 mx-auto">
                 @foreach($services as $service)
                     <div class="bg-gray-800 p-4 rounded-2xl shadow-md flex flex-col items-center
-                                group hover:bg-yellow-500 transition-all duration-500 ease-in-out">
+                                group hover:bg-yellow-500 transition-all duration-500 ease-in-out" data-aos="fade-up">
 
                         <x-dynamic-component :component="$icons[$service->icon] ?? 'heroicon-o-globe-alt'"
                             class="w-16 h-16 text-yellow-500 transition-all duration-500 ease-in-out
@@ -156,4 +156,7 @@
         </div>
     </section>
 
+    <script>
+        AOS.init();
+    </script>
 @endsection
